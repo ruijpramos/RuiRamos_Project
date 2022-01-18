@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox Navigation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            margin: 0;
+        }
+        
+        a {
+            color: white;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-decoration: none;
+            background: rgb(26, 121, 26);
+            padding: 20px 5px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        a:hover {
+            background: rgba(16, 24, 14, 0.75);
+        }
+        
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3em 1.5em;
+        }
+        
+        .navigation ul {
+            border: 1px solid rgb(26, 121, 26);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .navigation li {
+            flex: 3;
+        }
+        
+        .navigation .user {
+            flex: 1;
+        }
+        
+        @media all and (max-width: 1000px) {
+            .navigation ul {
+                flex-wrap: wrap;
+            }
+            .navigation li {
+                flex: 1 1 50%;
+            }
+            .navigation .user {
+                flex: 1 1 33.33%;
+            }
+        }
+        
+        @media all and (max-width: 480px) {
+            .navigation li {
+                flex-basis: 100%;
+            }
+            .navigation .user {
+                flex-basis: 50%;
+            }
+        }
+    </style>
+
+    <script>
+        var stateObject = {
+            "Georgia": {
+                "Batumi": [],
+                "Kutaisi": [],
+                "Tbilisi": []
+            },
+            "Greece": {
+                "Athens": [],
+                "Mikonos": [],
+                "Santorini": []
+            },
+            "Portugal": {
+                "Porto": [],
+                "Lisbon": [],
+                "Faro": [],
+            },
+        }
+
+        window.onload = function() {
+            var countrySel = document.getElementById("countrySel"),
+                citySel = document.getElementById("citySel");
+            for (var country in stateObject) {
+                countrySel.options[countrySel.options.length] = new Option(country, country);
+            }
+            countrySel.onchange = function() {
+                citySel.length = 1; // remove all options bar first
+                if (this.selectedIndex < 1) return; // done 
+                for (var city in stateObject[this.value]) {
+                    citySel.options[citySel.options.length] = new Option(city, city);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body style="background: rgb(164, 255, 156);">
+    <div class="main">
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="registration.html">Registration</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h2 align="center">REGISTRATION</h2>
+    <hr>
+    <hr><br>
+
+    <style>
+        .container {
+            height: 250px;
+            width: 400px;
+            margin: auto;
+            border: 2px solid green;
+        }
+        
+        .button-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+
+
+    <div class="container">
+        <form align="center" name="details" id="myform">
+            <br>
+            <label for="name">Username:</label>
+            <input type="name" id="name" value=""><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" value=""><br><br>
+
+            <label for="country">Country:</label>
+            <select name="country" id="countrySel" size="1">
+<option value="" selected="selected">Select Country</option>
+</select>
+            <br>
+            <br>
+            <label for="city">City:</label>
+            <select name="city" id="citySel" size="1">
+<option value="" selected="selected">Please select Country first</option>
+</select>
+            <br>
+            <br>
+
+            <label for="number">ID number:</label>
+            <input type="number" id="number" value=""><br><br>
+
+            <label for="date">Date of registration:</label>
+            <input type="date" onload="myFunction()" class="form-control" id="date"><br><br>
+            <closeform></closeform>
+        </form>
+        <div class="button-center">
+            <button onclick="myFunction()">Validate Registration</button>
+        </div>
+    </div>
+
+
+    <p id="quiz2_task2"></p>
+
+    <script>
+        function myFunction() {
+            //This function  will check if ID number contains 11 digits
+            var idNumber = document.forms["details"]["number"].value;
+            if (idNumber.length != 11) {
+                alert("ID number needs to contain 11 digits");
+            }
+
+            var email = document.forms["details"]["email"].value;
+            if (email.indexOf("@") === -1) {
+                alert("Your email address must include one @");
+            }
+            var today = new Date();
+            document.getElementById("date").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+        }
+    </script>
+</body>
+
+</html>
