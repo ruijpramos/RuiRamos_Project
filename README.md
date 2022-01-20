@@ -2,6 +2,10 @@
 
 --> Unzip the file RuiRamos_Project.rar
 
---> Open /html directory;
+--> Open /RuiRamos_Project
 
---> Open home.html;
+--> Open /Project
+
+--> Open /html directory
+
+--> Open home.html
