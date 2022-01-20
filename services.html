@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            margin: 0;
+        }
+        
+        a {
+            color: white;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-decoration: none;
+            background: rgb(26, 121, 26);
+            padding: 20px 5px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .change-language {
+            color: rgb(0, 0, 0);
+            font-weight: 100;
+            letter-spacing: 2px;
+            text-decoration: none;
+            background: rgb(164, 247, 164);
+            padding: 10px 5px;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        a:hover {
+            background: rgba(16, 24, 14, 0.75);
+        }
+        
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3em 1.5em;
+        }
+        
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .navigation li {
+            flex: 3;
+        }
+        
+        .navigation .user {
+            flex: 1;
+        }
+        
+        @media all and (max-width: 1000px) {
+            .navigation ul {
+                flex-wrap: wrap;
+            }
+            .navigation li {
+                flex: 1 1 50%;
+            }
+            .navigation .user {
+                flex: 1 1 33.33%;
+            }
+        }
+        
+        @media all and (max-width: 480px) {
+            .navigation li {
+                flex-basis: 100%;
+            }
+            .navigation .user {
+                flex-basis: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body style="background: rgb(164, 255, 156);">
+
+
+    <div class="main">
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html" data-lang="en">Home</a>
+                    <a href="home.html" data-lang="pt">Principal</a></li>
+
+                <li><a href="information.html" data-lang="en">Information</a>
+                    <a href="information.html" data-lang="pt">Informação</a></li>
+
+                <li><a href="services.html" data-lang="en">Services</a>
+                    <a href="services.html" data-lang="pt">Serviços</a></li>
+
+                <li><a href="feedback.html" data-lang="en">Feedback</a>
+                    <a href="feedback.html" data-lang="pt">Comentários</a></li>
+
+                <li><a href="aboutus.html" data-lang="en">About Us</a>
+                    <a href="aboutus.html" data-lang="pt">Sobre Nós</a></li>
+
+                <li><a href="contacts.html" data-lang="en">Contacts</a>
+                    <a href="contacts.html" data-lang="pt">Contactos</a></li>
+
+                <li><a href="registration.html" data-lang="en">Registration</a>
+                    <a href="registration.html" data-lang="pt">Registar</a></li>
+
+                <select class="change-language" id="change-language">
+            <option value="en" selected="selected">
+             <b>English</b>
+            <option value="pt">
+            <b>Português</b>
+            </option>
+          </select>
+            </ul>
+        </nav>
+    </div>
+
+    <h2 align="center" data-lang="en">SERVICES</h2>
+    <h2 align="center" data-lang="pt">SERVIÇOS</h2>
+    <hr>
+    <hr><br>
+
+    <ul>
+        <li>
+            <h4 data-lang="en"> NUTRITION </h4>
+            <h4 data-lang="pt"> NUTRIÇÃO </h4>
+
+            <p data-lang="en">This service is supported by 5 nutritionists.<br>An assessment is made of each client and, depending on the objectives of each one, weekly, biweekly or monthly plans are made.<br>The duration of this service is indefinite.</p>
+            <p data-lang="pt">Este serviço é suportado por 5 nutricionistas.<br>É feito uma avaliação a cada cliente e consoante os objetivos de cada um são feitos planos semanais, quinzenais ou mensais.<br>A duração deste serviço é indefinido.</p>
+        </li>
+        <br>
+        <li>
+            <h4 data-lang="en"> PHYSICAL ACTIVITY </h4>
+            <h4 data-lang="pt"> ATIVIDADE FÍSICA </h4>
+
+            <p data-lang="en">This service is supported by 8 personal trainers.<br>An assessment is made of each client and, depending on the objectives of each one, weekly, biweekly or monthly plans are made.<br>The duration of this service is indefinite.</p>
+            <p data-lang="pt">Este serviço é suportado por 8 treinadores pessoais.<br>É feito uma avaliação a cada cliente e consoante os objetivos de cada um são feitos planos semanais, quinzenais ou mensais.<br>A duração deste serviço é indefinido.</p>
+        </li>
+    </ul>
+    <br>
+    <hr>
+    <hr>
+    <br>
+
+
+
+    <p align="center" data-lang="en"><b><i>NOTE: FOR MORE INFORMATION DO NOT HESITATE TO CONTACT US!</i>
+        </b>
+    </p>
+    <p align="center" data-lang="pt"><b><i>NOTA: PARA MAIS INFORMAÇÕES NÃO HESITE EM CONTACTAR-NOS!</i>
+        </b>
+    </p>
+
+</body>
+
+<script src="library/i18n-language.js"></script>
+
+</html>

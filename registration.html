@@ -28,6 +28,17 @@
             text-align: center;
         }
         
+        .change-language {
+            color: rgb(0, 0, 0);
+            font-weight: 100;
+            letter-spacing: 2px;
+            text-decoration: none;
+            background: rgb(164, 247, 164);
+            padding: 10px 5px;
+            display: inline-block;
+            text-align: center;
+        }
+        
         a:hover {
             background: rgba(16, 24, 14, 0.75);
         }
@@ -114,20 +125,43 @@
 
 <body style="background: rgb(164, 255, 156);">
     <div class="main">
+
         <nav class="navigation">
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="information.html">Information</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-                <li><a href="registration.html">Registration</a></li>
+                <li><a href="home.html" data-lang="en">Home</a>
+                    <a href="home.html" data-lang="pt">Principal</a></li>
+
+                <li><a href="information.html" data-lang="en">Information</a>
+                    <a href="information.html" data-lang="pt">Informação</a></li>
+
+                <li><a href="services.html" data-lang="en">Services</a>
+                    <a href="services.html" data-lang="pt">Serviços</a></li>
+
+                <li><a href="feedback.html" data-lang="en">Feedback</a>
+                    <a href="feedback.html" data-lang="pt">Comentários</a></li>
+
+                <li><a href="aboutus.html" data-lang="en">About Us</a>
+                    <a href="aboutus.html" data-lang="pt">Sobre Nós</a></li>
+
+                <li><a href="contacts.html" data-lang="en">Contacts</a>
+                    <a href="contacts.html" data-lang="pt">Contactos</a></li>
+
+                <li><a href="registration.html" data-lang="en">Registration</a>
+                    <a href="registration.html" data-lang="pt">Registar</a></li>
+
+                <select class="change-language" id="change-language">
+    <option value="en" selected="selected">
+     <b>English</b>
+    <option value="pt">
+    <b>Português</b>
+    </option>
+  </select>
             </ul>
         </nav>
     </div>
 
-    <h2 align="center">REGISTRATION</h2>
+    <h2 align="center" data-lang="en">REGISTRATION</h2>
+    <h2 align="center" data-lang="pt">REGISTAR</h2>
     <hr>
     <hr><br>
 
@@ -136,47 +170,14 @@
             height: 400px;
             width: 600px;
             margin: auto;
-            border: 2px solid green;
+            border: 5px solid rgb(7, 61, 7);
+            background: rgb(195, 236, 195);
         }
         
         .button-center {
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        
-        #message {
-            display: none;
-            background: rgb(164, 255, 156);
-            color: #000;
-            margin: auto;
-            padding: 5px;
-            margin-top: 1px;
-        }
-        
-        #message p {
-            padding: 10px 35px;
-            font-size: 10px;
-        }
-        
-        .valid {
-            color: green;
-        }
-        
-        .valid:before {
-            position: relative;
-            left: -35px;
-            content: "✔";
-        }
-        
-        .invalid {
-            color: red;
-        }
-        
-        .invalid:before {
-            position: relative;
-            left: -35px;
-            content: "✖";
         }
     </style>
 
@@ -185,54 +186,60 @@
     <div class="container">
         <form align="center" name="details" id="myform">
             <br>
-            <label for="name">Username:</label>
+            <label for="name" data-lang="en">Username:</label>
+            <label for="name" data-lang="pt">Usuário:</label>
             <input type="name" id="name" value="" required><br><br>
 
-            <label for="email">Email:</label>
+            <label for="email" data-lang="en">Email:</label>
+            <label for="email" data-lang="pt">Email:</label>
             <input type="email" id="email" value="" required><br><br>
 
-            <label for="country">Country:</label>
-            <select name="country" id="countrySel" size="1" required>
+            <label for="country" data-lang="en">Country:</label>
+            <label for="country" data-lang="pt">País:</label>
+            <select name="country" id="countrySel" size="1" data-lang="en" required>
 <option value="" selected="selected">Select Country</option>
 </select>
-            <br>
-            <br>
-            <label for="city">City:</label>
-            <select name="city" id="citySel" size="1" required>
-<option value="" selected="selected">Please select Country first</option>
+            <select name="country" id="countrySel" size="1" data-lang="pt" required>
+<option value="" selected="selected">Selecionar País</option>
 </select>
+
+            <br>
+            <br>
+            <label for="city" data-lang="en">City:</label>
+            <label for="city" data-lang="pt">Cidade:</label>
+            <select name="city" id="citySel" size="1" data-lang="en" required>
+<option value="" selected="selected">Please select Country first</option>
+            </select>
+            <select name="city" id="citySel" size="1" data-lang="pt" required>
+<option value="" selected="selected">Por favor, selecione primeiro o País</option>
+</select>
+
             <br>
             <br>
 
-            <label for="mobileNumber">Mobile number:</label>
+            <label for="mobileNumber" data-lang="en">Mobile number:</label>
+            <label for="mobileNumber" data-lang="pt">Número de telemóvel:</label>
             <input type="mobileNumber" id="mobileNnumber" value="" required><br><br>
 
-            <label for="date">Date of registration:</label>
+            <label for="date" data-lang="en">Date of registration:</label>
+            <label for="date" data-lang="pt">Data do registo:</label>
             <input type="date" onload="myFunction()" class="form-control" id="date" required><br><br>
 
-            <label for="password">Password:</label>
-            <input type="text" id="password" onkeyup="validatePassword(this.value);" /><span id="msg"></span><br><br>
+            <label for="password" data-lang="en">Password:</label>
+            <label for="password" data-lang="pt">Palavra-chave:</label>
+            <input type="password" id="password" onkeyup="validatePassword(this.value);" /><span id="msg"></span><br><br>
 
-            <label for="repeatPassword">Confirm Password:</label>
+            <label for="repeatPassword" data-lang="en">Confirm Password:</label>
+            <label for="repeatPassword" data-lang="pt">Confirmar Palavra-chave:</label>
             <input type="password" name="repeatPassword" required><br><br><br>
 
             <closeform></closeform>
         </form>
         <div class="button-center">
-            <button onclick="myFunction()">Submit</button>
+            <button onclick="myFunction()" data-lang="en">Submit</button>
+            <button onclick="myFunction()" data-lang="pt">Registar</button>
         </div>
     </div>
-
-    <div id="message">
-        <h3>Password must contain the following:</h3>
-        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-        <p id="number" class="invalid">A <b>number</b></p>
-        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-    </div>
-
-    <script>
-    </script>
 
 
     <p id="quiz2_task2"></p>
@@ -303,6 +310,9 @@
             document.getElementById("msg").style.color = color;
         }
     </script>
+
+
+    <script src="library/i18n-language.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            text-align: justify;
+            margin-top: 5mm;
+        }
+        
+        a {
+            color: white;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-decoration: none;
+            background: rgb(26, 121, 26);
+            padding: 20px 5px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .change-language {
+            color: rgb(0, 0, 0);
+            font-weight: 100;
+            letter-spacing: 2px;
+            text-decoration: none;
+            background: rgb(164, 247, 164);
+            padding: 10px 5px;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        a:hover {
+            background: rgba(16, 24, 14, 0.75);
+        }
+        
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3em 1.5em;
+        }
+        
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .navigation li {
+            flex: 3;
+        }
+        
+        .navigation .user {
+            flex: 1;
+        }
+        
+        @media all and (max-width: 1000px) {
+            .navigation ul {
+                flex-wrap: wrap;
+            }
+            .navigation li {
+                flex: 1 1 50%;
+            }
+            .navigation .user {
+                flex: 1 1 33.33%;
+            }
+        }
+        
+        @media all and (max-width: 480px) {
+            .navigation li {
+                flex-basis: 100%;
+            }
+            .navigation .user {
+                flex-basis: 50%;
+            }
+        }
+        
+        p {
+            margin-left: auto;
+            margin-right: 5mm;
+            text-align: justify;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body style="background: rgb(164, 255, 156);">
+
+
+    <div class="main">
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html" data-lang="en">Home</a>
+                    <a href="home.html" data-lang="pt">Principal</a></li>
+
+                <li><a href="information.html" data-lang="en">Information</a>
+                    <a href="information.html" data-lang="pt">Informação</a></li>
+
+                <li><a href="services.html" data-lang="en">Services</a>
+                    <a href="services.html" data-lang="pt">Serviços</a></li>
+
+                <li><a href="feedback.html" data-lang="en">Feedback</a>
+                    <a href="feedback.html" data-lang="pt">Comentários</a></li>
+
+                <li><a href="aboutus.html" data-lang="en">About Us</a>
+                    <a href="aboutus.html" data-lang="pt">Sobre Nós</a></li>
+
+                <li><a href="contacts.html" data-lang="en">Contacts</a>
+                    <a href="contacts.html" data-lang="pt">Contactos</a></li>
+
+                <li><a href="registration.html" data-lang="en">Registration</a>
+                    <a href="registration.html" data-lang="pt">Registar</a></li>
+
+                <select class="change-language" id="change-language">
+            <option value="en" selected="selected">
+             <b>English</b>
+            <option value="pt">
+            <b>Português</b>
+            </option>
+          </select>
+            </ul>
+        </nav>
+    </div>
+
+    <h2 align="center" data-lang="en">INFORMATION</h2>
+    <h2 align="center" data-lang="pt">INFORMAÇÃO</h2>
+    <hr>
+    <hr><br>
+
+    <ul>
+
+        <h4 align="justify-content" data-lang="en"> Food and physical activity must go hand in hand when we are in search of a better quality of life. Knowing what to eat, according to the wear and tear of the exercises, is fundamental, as far as sports performance is concerned, as well as health.
+        </h4>
+        <h4 align="justify-content" data-lang="pt"> A alimentação e a atividade física devem andar de mãos dadas quando estamos em busca de uma melhor qualidade de vida. Saber o que comer, de acordo com o desgaste dos exercícios é fundamental, tanto no que diz respeito ao desempenho desportivo,
+            quanto à saúde.</h4>
+
+        <br>
+
+        <h4 data-lang="en"> Why should we eat healthy?</h4>
+        <h4 data-lang="pt"> Porque é que devemos ter uma alimentação saudável?</h4>
+        <li>
+            <p align="justify-content" data-lang="en"> Having a healthy and balanced diet is essential to ensure quality of life. This is because, in addition to providing energy and general well-being, through good nutrition it is possible to prevent and fight diseases, maintain a healthy body
+                weight and have good physical development. A balanced menu helps the immune system, improves mood and memory, reduces tiredness and stress, increases the quality of sleep, prevents premature skin aging, improves the digestive system, and
+                provides mood and more energy for daily activities.
+            </p>
+            <p align="justify-content" data-lang="pt"> Ter uma alimentação saudável e equilibrada é essencial para garantir qualidade de vida. Isto porque, além de fornecer energia e bem-estar geral, através de uma boa alimentação é possível prevenir e combater doenças, manter o peso corporal
+                saudável e ter um bom desenvolvimento físico. Um menu balanceado ajuda o sistema imunológico, melhora o humor e a memória, reduz o cansaço e o stress, aumenta a qualidade do sono, previne o envelhecimento precoce da pele, melhora o sistema
+                digestivo, e fornece disposição e mais energia para as atividades diárias.</p>
+        </li>
+
+        <br>
+
+        <h4 data-lang="en"> Why should we do physical activity?</h4>
+        <h4 data-lang="pt"> Porque é que devemos fazer atividade física?</h4>
+        <li>
+            <p align="justify-content" data-lang="en"> The practice of physical activity is undoubtedly essential to increase our quality of life. Numerous studies demonstrate how the frequent practice of physical activity prevents diseases and improves our disposition to carry out our daily activities.
+                Physical activities generate a lot of benefits for our body and also for our mind. For example, it prevents the development of chronic diseases, such as hypertension and diabetes, control cholesterol levels, physical activity can be an
+                important ally in the treatment of depression and anxiety, improves muscle and cardiorespiratory conditioning, improves sleep quality. , reduces stress and increases the feeling of well-being, among others.
+            </p>
+            <p align="justify-content" data-lang="pt"> A prática de atividade física é, sem dúvida, essencial para aumentar nossa qualidade de vida. Inúmeros estudos demonstram como a prática frequente de atividade física previne doenças e melhora nossa disposição para realizar nossas atividades
+                diárias. As atividades físicas geram muitos benefícios para o nosso corpo e também para a nossa mente. Por exemplo, previne o desenvolvimento de doenças crônicas, como hipertensão e diabetes, controla os níveis de colesterol, a atividade
+                física pode ser uma importante aliada no tratamento da depressão e ansiedade, melhora o condicionamento muscular e cardiorrespiratório, melhora a qualidade do sono. , reduz o estresse e aumenta a sensação de bem-estar, entre outros.</p>
+        </li>
+    </ul>
+</body>
+
+<script src="library/i18n-language.js"></script>
+
+</html>

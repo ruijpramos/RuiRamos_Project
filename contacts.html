@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            margin: 0;
+        }
+        
+        a {
+            color: white;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-decoration: none;
+            background: rgb(26, 121, 26);
+            padding: 20px 5px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .change-language {
+            color: rgb(0, 0, 0);
+            font-weight: 100;
+            letter-spacing: 2px;
+            text-decoration: none;
+            background: rgb(164, 247, 164);
+            padding: 10px 5px;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        a:hover {
+            background: rgba(16, 24, 14, 0.75);
+        }
+        
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3em 1.5em;
+        }
+        
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .navigation li {
+            flex: 3;
+        }
+        
+        .navigation .user {
+            flex: 1;
+        }
+        
+        @media all and (max-width: 1000px) {
+            .navigation ul {
+                flex-wrap: wrap;
+            }
+            .navigation li {
+                flex: 1 1 50%;
+            }
+            .navigation .user {
+                flex: 1 1 33.33%;
+            }
+        }
+        
+        @media all and (max-width: 480px) {
+            .navigation li {
+                flex-basis: 100%;
+            }
+            .navigation .user {
+                flex-basis: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body style="background: rgb(164, 255, 156);">
+
+
+    <div class="main">
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html" data-lang="en">Home</a>
+                    <a href="home.html" data-lang="pt">Principal</a></li>
+
+                <li><a href="information.html" data-lang="en">Information</a>
+                    <a href="information.html" data-lang="pt">Informação</a></li>
+
+                <li><a href="services.html" data-lang="en">Services</a>
+                    <a href="services.html" data-lang="pt">Serviços</a></li>
+
+                <li><a href="feedback.html" data-lang="en">Feedback</a>
+                    <a href="feedback.html" data-lang="pt">Comentários</a></li>
+
+                <li><a href="aboutus.html" data-lang="en">About Us</a>
+                    <a href="aboutus.html" data-lang="pt">Sobre Nós</a></li>
+
+                <li><a href="contacts.html" data-lang="en">Contacts</a>
+                    <a href="contacts.html" data-lang="pt">Contactos</a></li>
+
+                <li><a href="registration.html" data-lang="en">Registration</a>
+                    <a href="registration.html" data-lang="pt">Registar</a></li>
+
+                <select class="change-language" id="change-language">
+            <option value="en" selected="selected">
+             <b>English</b>
+            <option value="pt">
+            <b>Português</b>
+            </option>
+          </select>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <h2 align="center" data-lang="en">CONTACTS</h2>
+    <h2 align="center" data-lang="pt">CONTACTOS</h2>
+    <hr>
+    <hr><br>
+
+    <p align="center" data-lang="en"><em>For any queries you may have, do not hesitate to contact us.<br><br>We will answer as soon as possible.</em></p>
+    <p align="center" data-lang="pt"><em>Para qualquer dúvidas que tenha, não hesite em contactar-nos.<br><br>Responderemos assim que possivel.</em></p>
+
+
+
+    <h4 align="center"><em>DREAM SHAPE</em></h4>
+    <br>
+    <br>
+    <h5 align="center">Email:</h5>
+    <p align="center"><em>info@dreamshape.com</em></p>
+    <br>
+
+    <div class="fcf-body">
+
+        <div id="fcf-form">
+            <h3 class="fcf-h3" data-lang="en">Contact us</h3>
+            <h3 class="fcf-h3" data-lang="pt">Contacte-nos</h3>
+
+            <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+
+                <div class="fcf-form-group">
+                    <label for="Name" class="fcf-label" data-lang="en">Your name</label>
+                    <label for="Name" class="fcf-label" data-lang="pt">O seu nome</label>
+                    <div class="fcf-input-group">
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                    </div>
+                </div>
+
+                <div class="fcf-form-group">
+                    <label for="Email" class="fcf-label" data-lang="en">Your email address</label>
+                    <label for="Name" class="fcf-label" data-lang="pt">O seu endereço de email</label>
+                    <div class="fcf-input-group">
+                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                    </div>
+                </div>
+
+                <div class="fcf-form-group">
+                    <label for="Message" class="fcf-label" data-lang="en">Your message</label>
+                    <label for="Name" class="fcf-label" data-lang="pt">A sua mensagem</label>
+                    <div class="fcf-input-group">
+                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                    </div>
+                </div>
+
+                <div class="fcf-form-group">
+                    <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"><p data-lang="en">Send Message</p><p data-lang="pt">Enviar mensagem</p></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<style>
+    #fcf-form {
+        display: block;
+    }
+    
+    .fcf-body {
+        margin: auto;
+        margin-top: 1cm;
+        margin-bottom: 1cm;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #212529;
+        text-align: center;
+        background-color: rgb(228, 252, 223);
+        padding: 30px;
+        padding-bottom: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        max-width: 50%;
+    }
+    
+    .fcf-form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .fcf-input-group {
+        margin: auto;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        width: 100%;
+    }
+    
+    .fcf-form-control {
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: rgb(255, 255, 255);
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        outline: none;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        margin: auto;
+    }
+    
+    textarea.fcf-form-control {
+        font-family: -apple-system, Arial, sans-serif;
+        height: auto;
+    }
+    
+    .fcf-btn-primary {
+        color: #fff;
+        background-color: #2d7000;
+    }
+    
+    .fcf-btn-primary:hover {
+        color: #fff;
+        background-color: #06270b91;
+    }
+    
+    .fcf-btn-lg,
+    .fcf-btn-group-lg>.fcf-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.3rem;
+    }
+    
+    .fcf-btn-block {
+        display: block;
+        width: 100%;
+    }
+</style>
+
+
+
+<script src="library/i18n-language.js"></script>
+
+</html>
