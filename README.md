@@ -1,5 +1,7 @@
 # RuiRamos_Project
 
---> Start opening /html directory;
+--> Unzip the file RuiRamos_Project.rar
+
+--> Open /html directory;
 
 --> Open home.html;
